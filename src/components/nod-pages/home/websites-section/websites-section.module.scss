@@ -1,0 +1,39 @@
+.websites_section {
+  .website {
+    position: relative;
+    margin: 16px 0px;
+    border-radius: 5px;
+
+    *{
+        border-radius: 5px;
+    }
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(35, 57, 91,0.7);
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        @include flecCenter;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+        transform: scaleX(0);
+        transform-origin: left;
+
+        a{
+            color: $color_lightest;
+        }
+
+    }
+
+    &:hover{
+       .overlay{
+        transform: scaleX(1);
+       }
+       
+    }
+  }
+}

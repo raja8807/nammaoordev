@@ -1,13 +1,17 @@
 import Proptypes from "prop-types";
 import styles from "./section.module.scss";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import SectionHeading from "./section-heading/section_heading";
 
 const Section = (props) => {
-  const { varient, children } = props;
+  const { varient, children, heading } = props;
 
   return (
     <section className={`${styles.section} ${varient && styles[varient]}`}>
-      <Container>{children}</Container>
+      <Container>
+        <Row>{heading && <SectionHeading heading={heading} />}</Row>
+        {children}
+      </Container>
     </section>
   );
 };
