@@ -1,4 +1,5 @@
-import HomePage from "@/components/pages/home/home";
+import HomePage from "@/components/nod-pages/home/home";
+
 
 const Home = () => {
   return <HomePage/>

@@ -1,0 +1,121 @@
+.banner_section {
+  height: 100vh;
+  position: relative;
+  p {
+    margin: 0;
+  }
+
+  .banner_bg {
+    position: absolute;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    .banner_logo {
+      height: 70%;
+      width: 100%;
+      @include flecCenter;
+      img {
+        opacity: 0.15;
+        height: auto;
+        width: 100%;
+        filter: invert(94%) sepia(1%) saturate(7216%) hue-rotate(152deg)
+          brightness(104%) contrast(93%);
+      }
+    }
+  }
+
+  .banner_content {
+    color: $color_lightest;
+    height: 100%;
+    @include flecCenter;
+    text-align: center;
+    .text {
+      @include flecCenter;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 10;
+      .brand {
+        text-align: center !important;
+        small {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        span {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 14px;
+
+          hr {
+            background-color: red;
+            margin: 0;
+            margin: 0;
+            opacity: 1;
+            background-color: $color_lightest;
+            width: 100%;
+
+            &:nth-child(odd) {
+              margin-right: 10px;
+            }
+            &:nth-child(even) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .slogan {
+        font-size: 20px;
+      }
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    .features {
+      font-size: 16px;
+      .feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 6px;
+        font-weight: 500;
+        // font-size: 18px;
+      }
+    }
+  }
+
+  @include respond-above(lg) {
+    .banner_bg {
+      right: 0;
+      width: 70%;
+    }
+
+    .banner_content {
+      text-align: left;
+      .text {
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+      .slogan {
+        width: 70%;
+      }
+
+      .features {
+        text-align: left;
+        width: 65%;
+
+        .feature {
+            font-size: 20px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

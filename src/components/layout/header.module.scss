@@ -1,0 +1,16 @@
+.nod_header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 20;
+  .header_logo{
+    height: 40px;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+  }
+}
