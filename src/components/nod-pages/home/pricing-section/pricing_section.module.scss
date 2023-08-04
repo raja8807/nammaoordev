@@ -1,0 +1,63 @@
+.pricing_section {
+  p {
+    margin: 0;
+  }
+  * {
+    color: $color_darkest;
+  }
+  .price_card {
+    background-color: $color_lightest;
+    // height: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    // border: 2px solid $color_dark;
+    
+    &.card_recommended{
+        border: 3px dashed yellow;
+
+    }
+
+    .recommended {
+      background-color: transparent;
+      &:has(p){
+          background-color: $color_light;
+        }
+      border-radius: 10px 10px 0px 0px;
+      @include flecCenter;
+      color: $color_lightest;
+      height: 40px;
+      font-weight: 600;
+      p {
+        margin: 8px;
+      }
+    }
+
+    .details {
+      padding: 10px;
+      @include flecCenter;
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+      small {
+        text-decoration: line-through;
+      }
+
+      .benifits{
+        .benifit{
+            margin: 16px 0px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed black;
+        }
+      }
+    }
+  }
+}

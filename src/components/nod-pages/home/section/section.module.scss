@@ -9,7 +9,10 @@
     }
 
     &.dark{
-        // background-color: $color_darkest;
+        background-color: $color_dark;
+    }
+    &.darkest{
+        background-color: $color_darkest;
     }
     
     @keyframes gradient {

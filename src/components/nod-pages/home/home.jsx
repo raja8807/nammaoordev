@@ -1,3 +1,4 @@
+import PricingSection from "./pricing-section/pricing_section";
 import WebsitesSection from "./websites-section/websites_section";
 
 const { default: BannerSection } = require("./banner-section/banner_section");
@@ -11,7 +12,10 @@ const HomePage = () => {
       </Section>
       <Section varient="dark" heading="Websites We Built">
         <WebsitesSection/>
-        {/* <BannerSection /> */}
+      </Section>
+      <Section varient="darkest" heading="Our Pricing">
+        
+        <PricingSection/>
       </Section>
     </>
   );
