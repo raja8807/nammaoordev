@@ -78,19 +78,8 @@ h1 {
     font-weight: 700;
 }
 
-.features {
-        text-shadow: 1px 1px 2px $color_darkest;
-      font-size: 16px;
-      .feature {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 6px;
-        font-weight: 500;
-        // font-size: 18px;
-      }
-    }
+
+
   }
 
   @include respond-above(lg) {
@@ -110,16 +99,6 @@ h1 {
       }
       .slogan {
         width: 70%;
-      }
-
-      .features {
-        text-align: left;
-        width: 65%;
-
-        .feature {
-          font-size: 20px;
-          justify-content: flex-start;
-        }
       }
     }
   }

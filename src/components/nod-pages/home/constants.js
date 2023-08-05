@@ -5,15 +5,17 @@ import WebsitesSection from "./websites-section/websites_section";
 
 export const HOME_SECTIONS = [
     {
-      id: "banner",
+      id: "home",
       varient: "banner",
+      name:'Home',
       heading: null,
       component: <BannerSection />,
       inEffect: "fade-in",
     },
     {
-      id: "websotes",
+      id: "websites",
       varient: "dark",
+      name:'Websites',
       heading: "Websites We Built",
       component: <WebsitesSection />,
       inEffect: "fade-in",
@@ -21,14 +23,16 @@ export const HOME_SECTIONS = [
     {
       id: "pricing",
       varient: "darkest",
+      name:'Pricing',
       heading: "Our Pricing",
       component: <PricingSection />,
       inEffect: "fade-in",
     },
     {
-      id: "footer",
+      id: "contact",
       varient: "dark",
       heading: 'Contact',
+      name:'Contact Us',
       component: <FooterSection />,
       inEffect: "fade-in",
     },

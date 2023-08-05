@@ -12,6 +12,7 @@ const HomePage = () => {
           key={section.id}
           heading={section.heading}
           inEffect={section.inEffect}
+          id={section.id}
         >
           {section.component}
         </Section>

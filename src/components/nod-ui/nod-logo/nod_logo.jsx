@@ -1,9 +1,15 @@
 import Image from "next/image";
 import styles from "./nod_logo.module.scss";
 
-const NodLogo = () => {
+const NodLogo = (props) => {
+
+    const {clickHandler} = props
   return (
-    <div className={styles.nod_logo}>
+    <div className={styles.nod_logo}
+    onClick={()=>{
+        clickHandler()
+    }}
+    >
       <Image
         src="/images/logo/logo.png"
         alt="logo"

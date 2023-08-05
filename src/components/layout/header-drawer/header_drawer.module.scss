@@ -1,0 +1,26 @@
+.header_drawer {
+  background-color: $color_darkest;
+  height: 100%;
+
+  * {
+    color: $color_light;
+  }
+
+  a {
+    text-decoration: none;
+
+    &.active{
+        p{
+            color: $color_lightest;
+        }
+
+    }
+    &:hover {
+      p {
+        color: $color_lightest;
+        
+        
+      }
+    }
+  }
+}

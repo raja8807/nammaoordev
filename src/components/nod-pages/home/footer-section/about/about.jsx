@@ -1,4 +1,5 @@
 const { Col, Row, Image } = require("react-bootstrap");
+import { HOME_SECTIONS } from "../../constants";
 // import Image from 'next/image';
 import {
   Envelope,
@@ -8,7 +9,7 @@ import {
   Instagram,
   Linkedin,
   Link45deg,
-  Facebook
+  Facebook,
 } from "react-bootstrap-icons";
 import styles from "./about.module.scss";
 import Link from "next/link";
@@ -52,27 +53,17 @@ const About = () => {
           </div>
         </div>
 
-        <hr/>
+        <hr />
 
         <div className={styles.contact_details}>
-          <div>
-            <Link45deg />
-            <Link href='#'>
-              <p>Home</p>
-            </Link>
-          </div>
-          <div>
-            <Link45deg />
-            <Link href='#'>
-              <p>Websites we built</p>
-            </Link>
-          </div>
-          <div>
-            <Link45deg />
-            <Link href='#'>
-              <p>Our Pricing</p>
-            </Link>
-          </div>
+          {HOME_SECTIONS.map((link) => (
+            <div key={link.id}>
+              <Link45deg />
+              <Link href={`#${link.id}`}>
+                <p>{link.name}</p>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -96,7 +87,6 @@ const About = () => {
           <Link href="#">
             <Linkedin size="20px" />
           </Link>
-         
         </div>
       </div>
     </div>
