@@ -16,7 +16,9 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.about}
+    
+    data-aos='fade-right'>
       <Row>
         <Col XS={3}>
           <Image src="/images/logo/logo.png" fluid alt="logo" />
@@ -75,10 +77,16 @@ const About = () => {
         </div>
 
         <div className={styles.links}>
-          <Link href="#">
+          <Link
+            href="https://api.whatsapp.com/send?phone=917904236030"
+            target="_blank"
+          >
             <Whatsapp size="20px" />
           </Link>
-          <Link href="#">
+          <Link
+            href="https://instagram.com/namma_ooru_developer?igshid=MmU2YjMzNjRlOQ=="
+            target="_blank"
+          >
             <Instagram size="20px" />
           </Link>
           <Link href="#">

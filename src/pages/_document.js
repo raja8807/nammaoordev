@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       
       <Head />
-      <title> SR Fire & Safety</title>
+      <title>Namma Ooru Dev</title>
       <body>
         <Main />
         <NextScript />

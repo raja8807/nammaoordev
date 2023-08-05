@@ -5,7 +5,9 @@ import styles from "./contact.module.scss";
 
 const Contact = () => {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact}
+    data-aos='fade-left'
+    >
       <h2>Contact Us</h2>
       <p>
         Got a project in mind? Fill in the form or send us an email and we’ll
