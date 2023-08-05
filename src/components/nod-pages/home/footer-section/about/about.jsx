@@ -8,6 +8,7 @@ import {
   Instagram,
   Linkedin,
   Link45deg,
+  Facebook
 } from "react-bootstrap-icons";
 import styles from "./about.module.scss";
 import Link from "next/link";
@@ -90,8 +91,12 @@ const About = () => {
             <Instagram size="20px" />
           </Link>
           <Link href="#">
+            <Facebook size="20px" />
+          </Link>
+          <Link href="#">
             <Linkedin size="20px" />
           </Link>
+         
         </div>
       </div>
     </div>

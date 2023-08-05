@@ -36,6 +36,28 @@ const PricingSection = () => {
           applicable: true,
         },
       ],
+      info:[
+        {
+            id:'b1-i1',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b1-i2',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b1-i3',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b1-i4',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b1-i5',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+      ]
     },
     {
       id: ",1",
@@ -67,6 +89,29 @@ const PricingSection = () => {
           applicable: true,
         },
       ],
+
+      info:[
+        {
+            id:'b2-i1',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b2-i2',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b2-i3',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b2-i4',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b2-i5',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+      ]
     },
     {
       id: ",3",
@@ -98,6 +143,28 @@ const PricingSection = () => {
           applicable: true,
         },
       ],
+      info:[
+        {
+            id:'b3-i1',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b3-i2',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b3-i3',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b3-i4',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+        {
+            id:'b3-i5',
+            text:' Lorem ipsum dolor sit amet.'
+        },
+      ]
     },
   ];
 
@@ -105,6 +172,7 @@ const PricingSection = () => {
 
   return (
     <div className={styles.pricing_section}>
+       
       <Row>
         {pricings.map((priceData, idx) => (
           <PriceCard

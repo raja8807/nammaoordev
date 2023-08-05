@@ -2,10 +2,15 @@ import { Col } from "react-bootstrap";
 import { Check, X, XCircleFill, InfoCircleFill } from "react-bootstrap-icons";
 import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
 import styles from "./price_card.module.scss";
-import { useState } from "react";
+import Aos from "aos";
+import { useEffect } from "react";
 
 const PriceCard = (props) => {
-  const { priceData,index,showInfoFor,setShowInfoFor } = props;
+  const { priceData, index, showInfoFor, setShowInfoFor } = props;
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
 
   return (
@@ -14,14 +19,17 @@ const PriceCard = (props) => {
         className={`${styles.price_card} ${
           priceData.isRecommended && styles.card_recommended
         }`}
+
+        onClick={() => {
+            setShowInfoFor((prev) => (prev === index ? null : index));
+          }}
+          data-aos="flip-right"
       >
         <div
           className={styles.btn}
-          onClick={() => {
-            setShowInfoFor(prev => prev === index ? null : index)
-          }}
+          
         >
-          {showInfoFor===index ? <XCircleFill /> : <InfoCircleFill />}
+          {showInfoFor === index ? <XCircleFill /> : <InfoCircleFill />}
         </div>
         <div className={styles.recommended}>
           {priceData.isRecommended && <p>Recommended</p>}
@@ -36,7 +44,7 @@ const PriceCard = (props) => {
             {priceData.benifits.map((benifit) => (
               <div className={styles.benifit} key={benifit.id}>
                 {benifit.applicable ? (
-                  <Check size="30px" style={{ color: "green" }} />
+                  <Check size="30px" />
                 ) : (
                   <X size="30px" />
                 )}
@@ -48,7 +56,23 @@ const PriceCard = (props) => {
           <Nodbutton>Get Started</Nodbutton>
         </div>
 
-        {showInfoFor===index && <div className={styles.info}>hi</div>}
+        {showInfoFor === index && (
+          <div className={styles.info}>
+            <div>
+              {
+                <ul>
+                  {priceData.info.map((i) => {
+                    return (
+                      <li key={i.id}>
+                        <p>{i.text}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
+            </div>
+          </div>
+        )}
       </div>
     </Col>
   );

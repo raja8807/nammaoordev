@@ -1,13 +1,6 @@
 .footer_section {
   background-color: $color_light;
-  margin: 70px 0px;
   border-radius: 30px;
   box-shadow: 3px 3px 0px 4px $color_lightest;
   padding: 20px;
-//   background-image: url("/images/logo/logo.png");
-  
-
-  @include respond-above(lg) {
-    // margin: 0px;
-  }
 }

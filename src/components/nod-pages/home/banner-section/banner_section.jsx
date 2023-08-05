@@ -9,7 +9,9 @@ const BannerSection = () => {
     <div className={styles.banner_section}>
       <div className={styles.banner_bg}>
      
-        <div className={styles.banner_logo}>
+        <div className={styles.banner_logo}
+        data-aos="zoom-in"
+        >
           <Image
             src="/images/logo/logo.png"
             alt="xx"
@@ -21,7 +23,9 @@ const BannerSection = () => {
       <div className={styles.banner_content}>
         <Row>
           <Col lg={9} className={styles.text}>
-            <div className={styles.brand}>
+            <div className={styles.brand}
+            data-aos="fade-down"
+            >
               <small>Namma Ooru</small>
 
               <span>
@@ -30,14 +34,25 @@ const BannerSection = () => {
                 <hr />
               </span>
             </div>
-            <h1>
+            <h1
+             data-aos="fade-up"
+            >
               Empowering Your Business With Our Website Development Services
             </h1>
-            <p className={styles.slogan}>
+            <p className={styles.slogan}
+             data-aos="fade-right"
+            >
             Take your business to new heights with a website that represents your brand, engages your audience, and drives results.
             </p>
+            <div
+            data-aos="fade-in"
+            >
+
             <Nodbutton>Start a Project</Nodbutton>
-            <Row className={styles.features}>
+            </div>
+            <Row className={styles.features}
+            data-aos="fade-left"
+            >
               <Col xs={6} className={styles.feature}>
                 <CheckCircle />
                 <p>Responsive Design</p>
