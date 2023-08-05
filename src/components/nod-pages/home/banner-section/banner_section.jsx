@@ -50,7 +50,7 @@ const BannerSection = () => {
 
             <Nodbutton>Start a Project</Nodbutton>
             </div>
-            <Row className={styles.features}
+            {/* <Row className={styles.features}
             data-aos="fade-left"
             >
               <Col xs={6} className={styles.feature}>
@@ -77,7 +77,7 @@ const BannerSection = () => {
                 <CheckCircle />
                 <p>Customised Web Design</p>
               </Col>
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </div>
