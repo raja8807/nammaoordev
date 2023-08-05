@@ -16,7 +16,7 @@
       width: 100%;
       @include flecCenter;
       img {
-        opacity: 0.15;
+        opacity: 0.25;
         height: auto;
         width: 100%;
         filter: invert(94%) sepia(1%) saturate(7216%) hue-rotate(152deg)
@@ -37,6 +37,8 @@
       z-index: 10;
       .brand {
         text-align: center !important;
+        text-shadow: 0px 0px 5px $color_dark;
+
         small {
           font-size: 24px;
           font-weight: 600;
@@ -66,15 +68,18 @@
       }
       .slogan {
         font-size: 20px;
-      }
+        text-shadow: 1px 1px 2px $color_darkest;
     }
+}
 
-    h1 {
-      font-size: 35px;
-      font-weight: 700;
-    }
+h1 {
+    text-shadow: 1px 1px 2px $color_darkest;
+    font-size: 35px;
+    font-weight: 700;
+}
 
-    .features {
+.features {
+        text-shadow: 1px 1px 2px $color_darkest;
       font-size: 16px;
       .feature {
         display: flex;
@@ -112,7 +117,7 @@
         width: 65%;
 
         .feature {
-            font-size: 20px;
+          font-size: 20px;
           justify-content: flex-start;
         }
       }

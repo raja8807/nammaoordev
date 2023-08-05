@@ -1,31 +1,62 @@
-.section{
-    
-    min-height: 100vh !important;
-    &.banner {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-        height: 100vh;
+.section {
+  min-height: 100vh !important;
+  &.banner {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    height: 100vh;
+    animation: gradient 15s ease infinite;
+    position: relative;
+
+    .bg_overlay {
+      position: absolute;
+      // animation: floating 1s ease infinite;
+      // opacity: 0.5;
+      // background-color: red;
+      background-image: url("/images/banner/bg2.png");
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      @include respond-above(lg) {
+          transform: rotate(180deg);
+          background-image: url("/images/banner/bg.png");
+        display: initial;
+        opacity: 0.7;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.dark {
+    background-color: $color_dark;
+  }
+  &.darkest {
+    background-color: $color_darkest;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
 
-    &.dark{
-        background-color: $color_dark;
+    50% {
+      background-position: 100% 50%;
     }
-    &.darkest{
-        background-color: $color_darkest;
+
+    100% {
+      background-position: 0% 50%;
     }
-    
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-     
-        50% {
-            background-position: 100% 50%;
-        }
-     
-        100% {
-            background-position: 0% 50%;
-        }
-    }
+  }
 }

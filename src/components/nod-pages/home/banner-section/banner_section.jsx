@@ -8,6 +8,7 @@ const BannerSection = () => {
   return (
     <div className={styles.banner_section}>
       <div className={styles.banner_bg}>
+     
         <div className={styles.banner_logo}>
           <Image
             src="/images/logo/logo.png"

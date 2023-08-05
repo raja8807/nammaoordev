@@ -8,6 +8,11 @@ const Section = (props) => {
 
   return (
     <section className={`${styles.section} ${varient && styles[varient]}`}>
+        {
+            varient==='banner' && <div className={styles.bg_overlay}>
+
+            </div>
+        }
       <Container>
         <Row>{heading && <SectionHeading heading={heading} />}</Row>
         {children}

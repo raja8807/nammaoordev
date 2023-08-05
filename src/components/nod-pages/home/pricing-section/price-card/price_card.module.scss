@@ -1,0 +1,75 @@
+.price_card {
+    background-color: $color_lightest;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 0px 4px $color_light;
+    cursor: pointer;
+    width: 85%;
+    
+
+    @include respond-above(lg){
+        margin: 5px;
+    }
+    
+    &:hover{
+        background-color: $color_light;
+        box-shadow: 3px 3px 0px 4px $color_lightest;
+        transform: translate(-5px , -5px);
+        
+        .recommended {
+            background-color: transparent;
+            &:has(p){
+                background-color: $color_lightest;
+              }  
+          }
+    }
+    
+    &.card_recommended{
+        @include respond-above(lg){
+            transform: scale(1.1);
+        }
+    }
+
+    .recommended {
+      background-color: transparent;
+      &:has(p){
+          background-color: $color_light;
+        }
+      border-radius: 10px 10px 0px 0px;
+      @include flecCenter;
+      color: $color_lightest;
+      height: 40px;
+      font-weight: 600;
+      p {
+        margin: 8px;
+      }
+    }
+
+    .details {
+      padding: 10px;
+      @include flecCenter;
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+      small {
+        text-decoration: line-through;
+      }
+
+      .benifits{
+        .benifit{
+            margin: 16px 0px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed black;
+        }
+      }
+    }
+  }

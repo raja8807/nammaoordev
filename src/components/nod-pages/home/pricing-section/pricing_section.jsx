@@ -1,119 +1,115 @@
 import { Col, Row } from "react-bootstrap";
 import styles from "./pricing_section.module.scss";
-import { Check } from "react-bootstrap-icons";
-import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
+
+import PriceCard from "./price-card/price_card";
 
 
-const PricingSection = () => (
-  <div className={styles.pricing_section}>
-   
-    <Row>
-      
-      <Col xs={12} md={8} lg={4}>
-        <div className={styles.price_card}>
-          <div className={styles.recommended}>
-            {/* <p>Recommended</p> */}
-          </div>
-          <div className={styles.details}>
-            <h1>Static</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!
-            </p>
-            <br />
-            <small>₹10,000</small>
-            <h1>₹6,000</h1>
-            <div className={styles.benifits}>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>Editable Content</p>
-              </div>
-              <div className={styles.benifit}>
-                <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-            </div>
 
-            <Nodbutton>
-                Get Started
-            </Nodbutton>
-          </div>
-        </div>
-      </Col>
-      <Col xs={12} md={8} lg={4}>
-        <div className={`${styles.price_card} ${styles.card_recommended}`}>
-          <div className={styles.recommended}>
-            <p>Recommended</p>
-          </div>
-          <div className={styles.details}>
-            <h1>Dynamic</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!
-            </p>
-            <br />
-            <small>₹15,000</small>
-            <h1>₹10,000</h1>
-            <div className={styles.benifits}>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>Editable Content</p>
-              </div>
-              <div className={styles.benifit}>
-                <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-            </div>
+const PricingSection = () => {
+  const pricings = [
+    {
+        id:',1',
+        name:'Static',
+        isRecommended:false,
+        description:   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!',
+        actualPrice:'10,000',
+        currentPrice:'5,999',
+        benifits : [
+            {
+                id:'b1-1',
+                text : '24/7 Support',
+                applicable : true
+            },
+            {
+                id:'b1-2',
+                text : 'No. of Pages - 3',
+                applicable : false
+            },
+            {
+                id:'b1-3',
+                text : 'Editable Content',
+                applicable : false
+            },
+            {
+                id:'b1-4',
+                text : 'Responsive Ui',
+                applicable : true
+            },
+        ]
+    },
+    {
+        id:',1',
+        name:'Dynamic',
+        isRecommended:true,
+        description:   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!',
+        actualPrice:'15,000',
+        currentPrice:'9,999',
+        benifits : [
+            {
+                id:'b2-1',
+                text : '24/7 Support',
+                applicable : true
+            },
+            {
+                id:'b2-2',
+                text : 'No. of Pages - 3',
+                applicable : false
+            },
+            {
+                id:'b2-3',
+                text : 'Editable Content',
+                applicable : true
+            },
+            {
+                id:'b2-4',
+                text : 'Responsive Ui',
+                applicable : true
+            },
+        ]
+    },
+    {
+        id:',3',
+        name:'Customzed',
+        isRecommended:false,
+        description:   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!',
+        actualPrice:'25,000',
+        currentPrice:'15,000+',
+        benifits : [
+            {
+                id:'b3-1',
+                text : '24/7 Support',
+                applicable : true
+            },
+            {
+                id:'b3-2',
+                text : 'No. of Pages - 3+',
+                applicable : true
+            },
+            {
+                id:'b3-3',
+                text : 'Editable Content',
+                applicable : true
+            },
+            {
+                id:'b3-4',
+                text : 'Responsive Ui',
+                applicable : true
+            },
+        ]
+    },
+  ];
 
-            <Nodbutton>
-                Get Started
-            </Nodbutton>
-          </div>
-        </div>
-      </Col>
-      <Col xs={12} md={8} lg={4}>
-        <div className={styles.price_card}>
-          <div className={styles.recommended}>
-            {/* <p>Recommended</p> */}
-          </div>
-          <div className={styles.details}>
-            <h1>Customized</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quos!
-            </p>
-            <br />
-            <small>₹25,000</small>
-            <h1>₹15,000+</h1>
-            <div className={styles.benifits}>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-              <div className={styles.benifit}>
-              <Check size='30px'/>
-                <p>Editable Content</p>
-              </div>
-              <div className={styles.benifit}>
-                <Check size='30px'/>
-                <p>24/7 Support</p>
-              </div>
-            </div>
-
-            <Nodbutton>
-                Get Started
-            </Nodbutton>
-          </div>
-        </div>
-      </Col>
-      
-    </Row>
-  </div>
-);
+  return (
+    <div className={styles.pricing_section}>
+      <Row>
+        {
+            pricings.map((priceData)=>(
+                <PriceCard key={priceData.id} priceData={priceData}/>
+            ))
+        }
+      </Row>
+    </div>
+  );
+};
 
 export default PricingSection;

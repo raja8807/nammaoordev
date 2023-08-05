@@ -1,3 +1,4 @@
+import FooterSection from "./footer-section/footer-section";
 import PricingSection from "./pricing-section/pricing_section";
 import WebsitesSection from "./websites-section/websites_section";
 
@@ -14,8 +15,10 @@ const HomePage = () => {
         <WebsitesSection/>
       </Section>
       <Section varient="darkest" heading="Our Pricing">
-        
         <PricingSection/>
+      </Section>
+      <Section varient="dark" >
+        <FooterSection/>
       </Section>
     </>
   );
