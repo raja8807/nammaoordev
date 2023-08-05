@@ -1,14 +1,28 @@
 import { Col } from "react-bootstrap";
-import { Check,X } from "react-bootstrap-icons";
+import { Check, X, XCircleFill, InfoCircleFill } from "react-bootstrap-icons";
 import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
 import styles from "./price_card.module.scss";
+import { useState } from "react";
 
 const PriceCard = (props) => {
-  const { priceData } = props;
+  const { priceData,index,showInfoFor,setShowInfoFor } = props;
+
 
   return (
     <Col xs={12} md={8} lg={4}>
-      <div className={`${styles.price_card} ${priceData.isRecommended && styles.card_recommended}`}>
+      <div
+        className={`${styles.price_card} ${
+          priceData.isRecommended && styles.card_recommended
+        }`}
+      >
+        <div
+          className={styles.btn}
+          onClick={() => {
+            setShowInfoFor(prev => prev === index ? null : index)
+          }}
+        >
+          {showInfoFor===index ? <XCircleFill /> : <InfoCircleFill />}
+        </div>
         <div className={styles.recommended}>
           {priceData.isRecommended && <p>Recommended</p>}
         </div>
@@ -21,19 +35,20 @@ const PriceCard = (props) => {
           <div className={styles.benifits}>
             {priceData.benifits.map((benifit) => (
               <div className={styles.benifit} key={benifit.id}>
-                {
-                    benifit.applicable ?  <Check size="30px" style={{color:'green'}}/>
-                    :
-                    <X size="30px"/>
-                }
-               
+                {benifit.applicable ? (
+                  <Check size="30px" style={{ color: "green" }} />
+                ) : (
+                  <X size="30px" />
+                )}
+
                 <p>{benifit.text}</p>
               </div>
             ))}
           </div>
-
           <Nodbutton>Get Started</Nodbutton>
         </div>
+
+        {showInfoFor===index && <div className={styles.info}>hi</div>}
       </div>
     </Col>
   );

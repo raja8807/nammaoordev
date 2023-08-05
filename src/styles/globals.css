@@ -1,6 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
   background-color: #161925;
@@ -11,6 +14,9 @@ body{
   padding: 0;
   box-sizing: border-box;
   transition: 0.2s;
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Righteous', sans-serif; */
   p {
     margin: 0;
     padding: 0;

@@ -34,17 +34,17 @@ const BannerSection = () => {
               Empowering Your Business With Our Website Development Services
             </h1>
             <p className={styles.slogan}>
-              SEO-optimized, responsive and on-chain wallet connect. In days.
+            Take your business to new heights with a website that represents your brand, engages your audience, and drives results.
             </p>
             <Nodbutton>Start a Project</Nodbutton>
             <Row className={styles.features}>
               <Col xs={6} className={styles.feature}>
                 <CheckCircle />
-                <p>Fast turnaround</p>
+                <p>Responsive Design</p>
               </Col>
               <Col xs={6} className={styles.feature}>
                 <CheckCircle />
-                <p>SEO & Pagespeed optimized</p>
+                <p>SEO optimized</p>
               </Col>
               <Col xs={6} className={styles.feature}>
                 <CheckCircle />
@@ -53,6 +53,14 @@ const BannerSection = () => {
               <Col xs={6} className={styles.feature}>
                 <CheckCircle />
                 <p>Advanced Animations</p>
+              </Col>
+              <Col xs={6} className={styles.feature}>
+                <CheckCircle />
+                <p>Hosting & Maintenance</p>
+              </Col>
+              <Col xs={6} className={styles.feature}>
+                <CheckCircle />
+                <p>Customised Web Design</p>
               </Col>
             </Row>
           </Col>
