@@ -9,7 +9,7 @@ const Section = (props) => {
   const { varient, children, heading ,inEffect='fade-in',id} = props;
 
   return (
-    <section className={`${styles.section} ${varient && styles[varient]}`}
+    <section className={`home_section ${styles.section} ${varient && styles[varient]}`}
     data-aos={inEffect}
     id={id}
     >

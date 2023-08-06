@@ -2,15 +2,12 @@ import { Col } from "react-bootstrap";
 import { Check, X, XCircleFill, InfoCircleFill } from "react-bootstrap-icons";
 import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
 import styles from "./price_card.module.scss";
-import Aos from "aos";
-import { useEffect } from "react";
+
 
 const PriceCard = (props) => {
   const { priceData, index, showInfoFor, setShowInfoFor } = props;
 
-  useEffect(() => {
-    Aos.init();
-  }, []);
+ 
 
 
   return (

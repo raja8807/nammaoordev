@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({
-      easing: "ease-out-cubic",
+      // easing: "ease-out-cubic",
       duration: 1000,
       once: false,
     });
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
     <>
       {/* <SessionProvider session={pageProps.session}> */}
       {/* <SSRProvider> */}
-      <NodHeader />
+      {/* <NodHeader /> */}
       <Component {...pageProps} />
       {/* </SSRProvider> */}
       {/* </SessionProvider> */}

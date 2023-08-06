@@ -7,15 +7,18 @@ import { useEffect, useState } from "react";
 const { Offcanvas } = require("react-bootstrap");
 
 const HeaderDrawer = (props) => {
-  const { show, setShow } = props;
+  // const { } = props;
+
+  const {currentSection,setCurrentSection, show, setShow} = props
+
 
   const handleClose = () => {
     setShow(false);
   };
+  
 
   const router = useRouter();
-
-  const [currentSection, setCurrentSection] = useState("/#home");
+  // const [currentSection, setCurrentSection] = useState("/#home");
 
   useEffect(() => {
     setCurrentSection(router.asPath);

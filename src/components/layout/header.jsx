@@ -4,7 +4,10 @@ import Nodbutton from "../nod-ui/nod-button/nod_button";
 import styles from "./header.module.scss";
 import HeaderDrawer from "./header-drawer/header_drawer";
 
-const NodHeader = () => {
+const NodHeader = (props) => {
+
+  const {currentSection,setCurrentSection} = props
+
   const [showDrawer, setShowDrawer] = useState(false);
 
   return (
@@ -19,7 +22,9 @@ const NodHeader = () => {
         </div>
         <Nodbutton>Get Started</Nodbutton>
       </header>
-      <HeaderDrawer show={showDrawer} setShow={setShowDrawer} />
+      <HeaderDrawer show={showDrawer} setShow={setShowDrawer} currentSection={currentSection}
+      setCurrentSection={setCurrentSection}
+      />
     </>
   );
 };
