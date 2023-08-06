@@ -8,7 +8,7 @@ const WebsitesSection = () => {
   
 
   return (
-    <Row className={styles.websites_section}>
+    <Row className={styles.websites_section} style={{margin:'0'}}>
       {WEBSITES.map((website) => (
         <Col lg={6} key={website.id}>
           <div className={styles.website}

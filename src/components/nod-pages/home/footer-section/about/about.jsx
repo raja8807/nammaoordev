@@ -18,8 +18,11 @@ const About = () => {
   return (
     <div className={styles.about}
     
-    data-aos='fade-right'>
-      <Row>
+    >
+      <Row style={{margin:'0'}}
+    data-aos='fade-left'
+      
+      >
         <Col XS={3}>
           <Image src="/images/logo/logo.png" fluid alt="logo" />
         </Col>

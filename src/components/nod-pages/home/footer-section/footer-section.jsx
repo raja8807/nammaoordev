@@ -5,7 +5,7 @@ import About from "./about/about";
 
 const FooterSection = () => (
   <footer className={styles.footer_section}>
-    <Row>
+    <Row style={{margin:'0'}}>
       <Col xs={12} lg={8}>
         <About />
       </Col>

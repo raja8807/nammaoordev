@@ -21,7 +21,7 @@ const BannerSection = () => {
         </div>
       </div>
       <div className={styles.banner_content}>
-        <Row>
+        <Row style={{margin:'0'}}>
           <Col lg={9} className={styles.text}>
             <div className={styles.brand}
             data-aos="fade-down"

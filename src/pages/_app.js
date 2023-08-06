@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
     <>
       {/* <SessionProvider session={pageProps.session}> */}
       {/* <SSRProvider> */}
-      <NodHeader />
+      {/* <NodHeader /> */}
       <Component {...pageProps} />
       {/* </SSRProvider> */}
       {/* </SessionProvider> */}

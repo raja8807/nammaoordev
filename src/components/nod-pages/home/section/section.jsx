@@ -15,7 +15,7 @@ const Section = (props) => {
     >
       {varient === "banner" && <div className={styles.bg_overlay}></div>}
       <Container>
-        <Row>{heading && <SectionHeading heading={heading} />}</Row>
+        <Row style={{margin:'0'}}>{heading && <SectionHeading heading={heading} />}</Row>
         {children}
       </Container>
     </section>
