@@ -39,10 +39,13 @@ const About = () => {
       </Row>
 
       <div className={styles.details}>
-        <div className={styles.contact_details}>
+        <div className={styles.contact_details}
+    // data-aos='fade-left'
+        
+        >
           <div>
             <PersonCircle />
-            <p>Raja Rathinam,</p>
+            <p>Raja Rathinam</p>
           </div>
           <div>
             <Envelope />
@@ -62,7 +65,10 @@ const About = () => {
 
         <div className={styles.contact_details}>
           {HOME_SECTIONS.map((link) => (
-            <div key={link.id}>
+            <div key={link.id}
+    // data-aos='fade-right'
+            
+            >
               <Link45deg />
               <Link href={`#${link.id}`}>
                 <p>{link.name}</p>
