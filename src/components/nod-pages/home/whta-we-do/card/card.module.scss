@@ -4,15 +4,21 @@
   position: relative;
   background-color: $color_dark;
   color: $color_light;
-  padding: 56px 20px 0 20px ;
+  padding: 70px 20px 0 20px;
   border-radius: 20px;
-  h1{
+  @include respond-above(md) {
+    min-height: 450px;
+    margin: 10px 0px 100px 0px !important;
+  }
+  border-radius: 20px;
+
+  h1 {
     text-align: center;
     font-weight: 600;
     color: $color_lightest;
   }
 
-  p{
+  p {
     font-size: 20px;
   }
   .top {
@@ -22,16 +28,21 @@
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 70%);
     border-radius: 50%;
-}
+    @include flecCenter;
+    color: $color_dark;
 
-
-@include respond-above(sm){
-    margin: 100px 0px 100px 0px;
-    .top{
-      transform: translate(-50%, 150%);
-
+    svg{
+        width:50%;
+        height: auto;
+    }
   }
+
+  @include respond-above(sm) {
+    margin: 100px 0px 100px 0px;
+    .top {
+      transform: translate(-50%, 150%);
+    }
   }
 }

@@ -3,6 +3,7 @@ import styles from "./what-we-do.module.scss";
 import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
 import Card from "./card/card";
 import { useRouter } from "next/router";
+import WHAT_WE_DO from "./data";
 
 const WhatWeDo = () => {
   const router = useRouter();
@@ -48,11 +49,11 @@ const WhatWeDo = () => {
         <br />
         <br />
         <br />
+        <br />
         <Row>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {WHAT_WE_DO.map((c) => (
+            <Card key={c.id}  data={c}/>
+          ))}
         </Row>
       </Container>
     </div>
