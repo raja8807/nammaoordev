@@ -4,36 +4,51 @@
     margin: 16px 0px;
     border-radius: 5px;
 
-    *{
-        border-radius: 5px;
+    .sale_label {
+      position: absolute;
+      @include flecCenter;
+      height: 50px;
+      width: 50px;
+      top: -20px;
+      right: -20px;
+      background-color: red;
+      border-radius: 50%;
+      color: yellow;
+      font-weight: 600;
+      border: 2px dashed yellow;
+      font-size: 11px;
+      transform: rotate(10deg);
+      // padding: 10px;
     }
 
-    .overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgb(35, 57, 91,0.7);
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        @include flecCenter;
-        flex-direction: column;
-        gap: 20px;
-        font-size: 20px;
-        transform: scaleX(0);
-        transform-origin: left;
-
-        a{
-            color: $color_lightest;
-        }
-
+    * {
+      border-radius: 5px;
     }
 
-    &:hover{
-       .overlay{
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(35, 57, 91, 0.7);
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      @include flecCenter;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 20px;
+      transform: scaleX(0);
+      transform-origin: left;
+
+      a {
+        color: $color_lightest;
+      }
+    }
+
+    &:hover {
+      .overlay {
         transform: scaleX(1);
-       }
-       
+      }
     }
   }
 }

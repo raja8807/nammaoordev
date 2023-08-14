@@ -20,6 +20,9 @@ const WebsitesSection = () => {
               >{website.href}</Link>
               <Nodbutton>Start A Project</Nodbutton>
             </div>
+            {
+              website.isForSale && <div className={styles.sale_label}>For Sale</div>
+            }
             <Image src={website.src} fluid alt="website"/>
           </div>
         </Col>
