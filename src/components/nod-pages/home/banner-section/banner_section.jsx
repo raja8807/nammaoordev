@@ -49,6 +49,12 @@ const BannerSection = () => {
             >
 
             <Nodbutton>Start a Project</Nodbutton>
+          <div>
+            <br/>
+              <Nodbutton clickHandler={()=>{
+                alert()
+              }}>Quote for 2999/-</Nodbutton>
+          </div>
             </div>
             {/* <Row className={styles.features}
             data-aos="fade-left"

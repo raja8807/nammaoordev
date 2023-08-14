@@ -3,12 +3,13 @@ import { useState } from "react";
 import Nodbutton from "../nod-ui/nod-button/nod_button";
 import styles from "./header.module.scss";
 import HeaderDrawer from "./header-drawer/header_drawer";
+import { useRouter } from "next/router";
 
 const NodHeader = (props) => {
-
-  const {currentSection,setCurrentSection} = props
+  const { currentSection, setCurrentSection } = props;
 
   const [showDrawer, setShowDrawer] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -20,10 +21,19 @@ const NodHeader = (props) => {
             }}
           />
         </div>
-        <Nodbutton>Get Started</Nodbutton>
+        <Nodbutton
+          clickHandler={() => {
+            router.push("https://wa.me/+917904236030");
+          }}
+        >
+          Get Quote for 2999/-
+        </Nodbutton>
       </header>
-      <HeaderDrawer show={showDrawer} setShow={setShowDrawer} currentSection={currentSection}
-      setCurrentSection={setCurrentSection}
+      <HeaderDrawer
+        show={showDrawer}
+        setShow={setShowDrawer}
+        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
       />
     </>
   );

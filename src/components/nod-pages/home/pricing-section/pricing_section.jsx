@@ -1,18 +1,17 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import styles from "./pricing_section.module.scss";
 
 import PriceCard from "./price-card/price_card";
 import { useState } from "react";
 import { PRICINGS_DATA } from "./cosntants";
+import Nodbutton from "@/components/nod-ui/nod-button/nod_button";
 
 const PricingSection = () => {
-  
-
   const [showInfoFor, setShowInfoFor] = useState(null);
 
   return (
-    <div className={styles.pricing_section}>
-       
+  <Container>
+      <div className={styles.pricing_section}>
       <Row>
         {PRICINGS_DATA.map((priceData, idx) => (
           <PriceCard
@@ -24,7 +23,13 @@ const PricingSection = () => {
           />
         ))}
       </Row>
+      <br/>
+      <Row>
+        <Nodbutton>Quote for 2999/-</Nodbutton>
+      </Row>
+      <br/>
     </div>
+  </Container>
   );
 };
 
