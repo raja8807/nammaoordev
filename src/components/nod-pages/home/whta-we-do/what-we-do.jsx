@@ -35,7 +35,7 @@ const WhatWeDo = () => {
                 <div className={styles.cheap_btn}>
                   <Nodbutton
                     clickHandler={() => {
-                      router.push("https://wa.me/+917904236030");
+                      router.push("https://wa.link/i5g54s");
                     }}
                   >
                     Get Started
