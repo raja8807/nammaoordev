@@ -1,7 +1,7 @@
 .price_card {
   background-color: $color_lightest;
   margin: 30px auto;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-bottom: 20px;
   box-shadow: 3px 3px 0px 4px $color_light;
   cursor: pointer;
@@ -33,7 +33,7 @@
     &:has(p) {
       background-color: $color_light;
     }
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     @include flecCenter;
     color: $color_lightest;
     height: 40px;
@@ -119,7 +119,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: $color_dark;
     color: $color_lightest;
     div {

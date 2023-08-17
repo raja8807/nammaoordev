@@ -51,8 +51,8 @@ const WhatWeDo = () => {
         <br />
         <br />
         <Row>
-          {WHAT_WE_DO.map((c) => (
-            <Card key={c.id}  data={c}/>
+          {WHAT_WE_DO.map((c,idx) => (
+            <Card key={c.id}  data={c} index={idx}/>
           ))}
         </Row>
       </Container>
