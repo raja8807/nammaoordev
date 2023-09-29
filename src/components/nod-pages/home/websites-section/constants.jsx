@@ -1,4 +1,9 @@
 export const WEBSITES = [
+  {
+    id: "2",
+    src: "/images/websites/web2.png",
+    href: "https://www.vsilage.com/",
+  },
     {
       id: "1",
       src: "/images/websites/web1.png",
@@ -6,15 +11,10 @@ export const WEBSITES = [
       isForSale:true
     },
     {
-      id: "2",
-      src: "/images/websites/web2.png",
-      href: "https://eggetarian.vercel.app/",
-    },
-    {
       id: "3",
       src: "/images/websites/web3.png",
-      href: "https://sr-fire-safety.vercel.app/",
-      isForSale:true
+      href: "https://ushealthacademy.online/",
+      // isForSale:true
     },
 
   ];
